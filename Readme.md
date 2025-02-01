@@ -29,7 +29,7 @@ Simply click on the links below to get started and dive into a world of learning
 ### 7. [Indexes](./indexes.md)
 ### 8. [Views](./views.md)
 ### 9. [Transactions](./transactions.md)
-### 10. [Common Table Expressions (CTEs)](./transactions.md)
+### 10. [Common Table Expressions (CTEs)](./cte.md)
 ### 11. [Window Functions](./window-functions.md)
 ### 12. [Performance Optimization](./performance-optimization.md)
 ### 13. [Advanced SQL Concepts](./advanced-sql-concepts.md)
