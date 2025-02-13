@@ -113,7 +113,6 @@ Different databases provide different functions to fetch the **current date and 
 | MySQL / PostgreSQL | `NOW()` | `CURRENT_DATE` |
 | SQL Server | `GETDATE()` | `CONVERT(DATE, GETDATE())` |
 
-Sure! Below are the **separate outputs** for each query, formatted as requested.  
 
 ---
 
