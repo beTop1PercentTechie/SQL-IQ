@@ -71,6 +71,7 @@ CALL GetAccountBalance(1);
 
 ### 🔹 Explanation:
 Stored procedures support **three types of parameters**:
+
 1️⃣ **IN** – Input only  
 2️⃣ **OUT** – Returns a value  
 3️⃣ **INOUT** – Used for both input & output  

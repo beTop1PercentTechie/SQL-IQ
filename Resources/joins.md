@@ -47,13 +47,14 @@ A **JOIN** in SQL is used to **combine data** from two or more tables based on a
 - **Retrieve Meaningful Data:** We can fetch related records from different tables efficiently.
 
 🔹 **Types of Joins in SQL:**
-1. **INNER JOIN** – Returns matching records from both tables.
-2. **OUTER JOIN** – Includes unmatched records:
-   - **LEFT JOIN** – Includes unmatched records from the left table.
-   - **RIGHT JOIN** – Includes unmatched records from the right table.
-   - **FULL OUTER JOIN** – Includes unmatched records from both tables.
-3. **SELF JOIN** – Joins a table with itself.
-4. **CROSS JOIN** – Returns the Cartesian product of two tables.
+
+1. **INNER JOIN** – Retrieves only the matching records from both tables based on a specified condition.  
+2. **OUTER JOIN** – Includes unmatched records along with matched ones:  
+   - **LEFT JOIN (Left Outer Join)** – Returns all records from the left table, along with matching records from the right table. If no match is found, NULL values are returned for columns from the right table.  
+   - **RIGHT JOIN (Right Outer Join)** – Returns all records from the right table, along with matching records from the left table. If no match is found, NULL values are returned for columns from the left table.  
+   - **FULL OUTER JOIN** – Returns all records from both tables, including unmatched records from each. If no match is found, NULL values are used for missing data.  
+3. **SELF JOIN** – A table joins itself by treating it as two separate tables. Useful for hierarchical relationships like employee-manager structures.  
+4. **CROSS JOIN** – Produces the Cartesian product of two tables, meaning each row from the first table is paired with every row from the second table.  
 
 ---
 
@@ -173,9 +174,12 @@ LEFT JOIN employees e2 ON e1.department_id = e2.id;
 🔹 **Example Output:**
 | employee | manager |
 |---------|---------|
-| Alice   | NULL    |
-| Bob     | NULL    |
-| Charlie | NULL    |
+|Alice	  |  Alice  |
+|  Bob	  |  Bob    |
+| Charlie	|  Alice  |
+|  David	| Charlie |
+|  Eve	  |  Bob    |
+|  Frank	|  NULL   |
 
 *(If managers were employees too, they would appear in the manager column.)*
 

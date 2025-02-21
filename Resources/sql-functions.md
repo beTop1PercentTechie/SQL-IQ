@@ -248,7 +248,7 @@ SELECT name, COALESCE(salary, 0) AS salary FROM employees;
 | Charlie| 70000.00        |
 | David  | 50000.00        |
 | Eve    | 45000.00        |
-| Frank  | 0               |
+| Frank  | 0.00               |
 
 ---
 

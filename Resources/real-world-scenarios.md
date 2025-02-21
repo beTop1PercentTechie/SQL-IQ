@@ -137,12 +137,9 @@ WHERE e.salary > m.salary;
 🔹 **Example Output:**
 | employee | employee_salary | manager | manager_salary |
 |----------|----------------|---------|----------------|
-| Charlie  | 80000          | Alice   | 70000          |
-| David    | 75000          | Charlie | 70000          |
 
-🔹 **Explanation:**
-- **Charlie earns more than Alice (CEO)**.
-- **David earns more than Charlie (CFO)**.
+
+
 
 ---
 
@@ -176,11 +173,12 @@ SELECT * FROM RankedSalaries WHERE rank <= 3;
 ```
 
 🔹 **Example Output:**
-| employee_id | name   | salary | rank |
-|------------|-------|--------|------|
-| 3          | Charlie | 80000 | 1    |
-| 4          | David  | 75000 | 2    |
-| 8          | Grace  | 75000 | 2    |
+| employee_id  | name   | department | salary   | manager_id |
+|---- |--------|-----------|--------- |------------|
+| 3   | Charlie | Finance   | 80000.00 | -          |
+| 4   | David   | Finance   | 75000.00 | 3          |
+| 8   | Grace   | Finance   | 75000.00 | 3          |
+
 
 🔹 **Explanation:**
 - The **first two queries** use `LIMIT` or `FETCH FIRST` for the **top 3 highest salaries**.

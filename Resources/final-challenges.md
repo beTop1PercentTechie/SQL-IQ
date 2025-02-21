@@ -67,13 +67,16 @@ LIMIT 1;
 
 🔹 **Alternative Query (Handling Ties)**:
 ```sql
+
 WITH RankedSales AS (
     SELECT product, COUNT(*) AS occurrence,
-           RANK() OVER (ORDER BY COUNT(*) DESC) AS rank
+           RANK() OVER (ORDER BY COUNT(*) DESC) AS `rank`
     FROM sales
     GROUP BY product
 )
-SELECT product, occurrence FROM RankedSales WHERE rank = 1;
+SELECT product, occurrence FROM RankedSales WHERE `rank` = 1;
+
+
 ```
 
 ---
@@ -223,9 +226,9 @@ FROM CumulativeSales;
 🔹 **Example Output:**
 | product | total_sales | cumulative_percentage |
 |---------|------------|-----------------------|
-| Laptop  | 19         | 48.72%                |
-| Tablet  | 10         | 100.00%                |
-| Phone   | 10         | 100.00%               |
+| Laptop  | 19         | 48.72               |
+| Tablet  | 10         | 100.00               |
+| Phone   | 10         | 100.00               |
 
 🔹 **Explanation:**
 - **Calculates cumulative percentage of total sales**.
